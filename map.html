@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni Map</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <!-- Custom Styles -->
+	    <link rel="stylesheet" href="styles.css" />
+
+	
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="map.css" />
+
+    <style>
+        /* Fallback styles if not included in map.css */
+        #map {
+            padding: 0 2em 2em;
+        }
+
+        #world_map {
+            width: 100%;
+            height: 600px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="image/logo.png" alt="Logo" /></a>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alumni_wall.html">Alumni Wall</a></li>
+            <li><a href="map.html" class="active">Map</a></li>
+            <li><a href="year_book.html">Year Book</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Map Section -->
+    <section id="map">
+        
+        <div id="world_map"></div>
+    </section>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Map Initialization -->
+    <script>
+        const map = L.map('world_map').setView([10, 20], 2);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const alumni = [
+            { name: "John Doe", location: [40.7128, -74.0060], city: "New York, USA" },
+            { name: "Jane Smith", location: [51.5074, -0.1278], city: "London, UK" },
+            { name: "Mary Johnson", location: [-33.8688, 151.2093], city: "Sydney, Australia" },
+            { name: "Michael Brown", location: [35.6895, 139.6917], city: "Tokyo, Japan" },
+            { name: "Emily Davis", location: [43.651070, -79.347015], city: "Toronto, Canada" }
+        ];
+
+        alumni.forEach(alumnus => {
+            L.marker(alumnus.location)
+                .addTo(map)
+                .bindPopup(`<strong>${alumnus.name}</strong><br>${alumnus.city}`);
+        });
+    </script>
+
+</body>
+</html>

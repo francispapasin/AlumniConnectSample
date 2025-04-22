@@ -1,0 +1,97 @@
+/* General Styles for the Year Book */
+#year_book {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Year Book Container Styles */
+.year-book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em; /* Spacing between entries */
+    justify-content: center; /* Center-align the entries */
+    margin-top: 20px; /* Add spacing between batches */
+}
+
+/* Individual Year Book Entry Styles */
+.year-book-entry {
+    background-color: #fff;
+    padding: 1em; /* Padding inside each box */
+    width: 150px; /* Set a fixed width for each entry box */
+    height: 220px; /* Set a fixed height for each entry box */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center-align the content vertically */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for better visual appeal */
+    border-radius: 10px; /* Optional: Add rounded corners to the box */
+    text-align: center;
+    background-color: #f9f9f9; /* Slight background color for better contrast */
+}
+
+/* Image Styles */
+.year-book-entry img {
+    width: 120px; /* Fixed width for images */
+    height: 120px; /* Fixed height for images */
+    object-fit: cover; /* Ensure the image covers the box without stretching */
+    margin-bottom: 10px; /* Space between the image and name */
+    border-radius: 8px; /* Optional: Add a slight border radius to the image for a more refined look */
+}
+
+/* Name Text Styling */
+.year-book-entry p {
+    font-size: 1.2em; /* Adjust text size for the name */
+    font-weight: bold;
+    color: #333; /* Ensure the name color stands out */
+    margin-top: 10px; /* Space above the name */
+    overflow-wrap: break-word; /* Ensure text does not overflow */
+}
+
+/* Batch Container Styles */
+.batch-container {
+    margin-top: 40px; /* Space between different batches */
+    padding: 0 20px; /* Padding for the container */
+}
+
+/* Section Title Styles */
+#year_book h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Batch Year Heading Styles */
+.batch-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .year-book-container {
+        justify-content: flex-start;
+    }
+
+    .year-book-entry {
+        width: 120px; /* Smaller width for mobile screens */
+        height: auto; /* Auto height for better mobile layout */
+    }
+
+    .year-book-entry img {
+        width: 120px; /* Smaller images for mobile */
+        height: 120px;
+    }
+
+    #year_book h1 {
+        font-size: 2em;
+    }
+
+    .batch-container h2 {
+        font-size: 1.5em;
+    }
+}

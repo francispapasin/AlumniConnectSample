@@ -1,0 +1,12 @@
+/* Map Styles */
+#world_map {
+    height: 1000px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1em;
+	margin-top:0px;
+}
+
+
+

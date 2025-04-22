@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+	<link rel="stylesheet" href="profile.css">
+	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+ <nav class="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="image/logo.png" alt="Logo"></a>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="alumni_wall.html">Alumni Wall</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="year_book.html">Year Book</a></li>
+        <li><a href="profile.html">Profile</a></li>
+    </ul>
+</nav>
+    <section id="profile">
+        <div class="profile-header">
+            <img src="image/cover.jpg" alt="Cover Image" class="cover-img">
+            <div class="profile-header-content">
+                <img src="image/profile.jpg" alt="Profile Image" class="profile-img">
+                <h2>John Doe</h2>
+                <p>Class of 2020 - Computer Science</p>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="profile-info">
+                <h3>Profile Information</h3>
+                <div class="profile-img-container">
+                    <img src="image/profile.jpg" alt="Profile Image" class="profile-img-box">
+                </div>
+                <form>
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" id="full_name" name="full_name" value="John Doe"><br><br>
+                    
+                    <label for="graduate_year">Graduate Year:</label>
+                    <input type="text" id="graduate_year" name="graduate_year" value="2020"><br><br>
+                    
+                    <label for="course">Course:</label>
+                    <input type="text" id="course" name="course" value="Computer Science"><br><br>
+                    
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" value="New York, USA"><br><br>
+                    
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description">Software Engineer at TechCorp</textarea><br><br>
+                    
+                    <input type="submit" value="Update Profile">
+                </form>
+            </div>
+             <div class="alumni-entry">
+                <div class="alumni-header">
+                    <img src="image/profile.jpg" alt="John Doe" class="alumni-img">
+                    <div>
+                        <h4>John Doe</h4>
+                        <p>Class of 2017</p>
+                    </div>
+                </div>
+                <img src="image/post5.jpg" alt="Post Image" class="post-img">
+                <p>John Doe recently released her first book, a gripping mystery novel that has received rave reviews. Her storytelling skills and creativity have established her as a promising new author in the literary world.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

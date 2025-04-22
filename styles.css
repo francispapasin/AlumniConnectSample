@@ -1,0 +1,61 @@
+/* Basic Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 0.5em 2em; /* Adjusted padding for better sizing */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and navigation items */
+}
+
+nav .logo img {
+   width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.5em;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 50px; /* Adjusted margin for spacing between navigation items */
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-weight: 500;
+    font-size: 10px; /* Increased text size */
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+    border-radius: 4px;
+}
+
+
+
