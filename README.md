@@ -1,2 +1,3 @@
 # AlumniConnectSample
-for seph
+final project for Integrative Programming and Technology
+
